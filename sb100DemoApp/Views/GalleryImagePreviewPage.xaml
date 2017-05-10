@@ -2,6 +2,7 @@
 <ContentPage x:Class="sb100DemoApp.Views.GalleryImagePreviewPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:local="clr-namespace:sb100DemoApp;assembly=sb100DemoApp"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True">
@@ -13,16 +14,16 @@
 
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-            <Image x:Name="img"
-                   HorizontalOptions="FillAndExpand"
-                   VerticalOptions="FillAndExpand"
-                   Source="{Binding source}" />
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        FadeAnimationEnabled="true"
+                                        Source="{Binding source}" x:Name="img" />
 
             <!--  CLOSE ICON  -->
             <StackLayout Padding="20">
 
                 <Label x:Name="lblClose"
-					WidthRequest="30"
+                       WidthRequest="30"
                        HeightRequest="30"
                        HorizontalOptions="End"
                        VerticalOptions="Start"

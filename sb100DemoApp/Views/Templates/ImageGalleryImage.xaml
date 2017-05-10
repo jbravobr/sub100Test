@@ -2,13 +2,15 @@
 <ContentView x:Class="sb100DemoApp.Views.ImageGalleryImage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Name="Root">
     <ContentView.Content>
-        <Image HorizontalOptions="FillAndExpand"
-               VerticalOptions="FillAndExpand"
-               Aspect="AspectFill"
-               Source="{Binding Source={x:Reference Name=Root},
-                                Path=Image}" />
+        <ffimageloading:CachedImage HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    Aspect="AspectFill"
+                                    FadeAnimationEnabled="true"
+                                    Source="{Binding Source={x:Reference Name=Root},
+                                                     Path=Image}" />
     </ContentView.Content>
     <ContentView.GestureRecognizers>
         <TapGestureRecognizer Tapped="OnImageTapped" />

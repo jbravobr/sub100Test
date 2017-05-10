@@ -3,6 +3,7 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:local="clr-namespace:sb100DemoApp;assembly=sb100DemoApp"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:templates="clr-namespace:sb100DemoApp.Views;assembly=sb100DemoApp"
@@ -11,18 +12,19 @@
     <ContentPage.Content>
         <Grid>
             <!--  BACKGROUND IMAGE  -->
-            <Image VerticalOptions="Start"
-                   Aspect="AspectFill"
-                   BackgroundColor="Black"
-                   IsOpaque="true"
-                   Opacity="1"
-                   Source="{Binding BackgroundImage}">
-                <Image.HeightRequest>
+            <ffimageloading:CachedImage VerticalOptions="Start"
+                                        Aspect="AspectFill"
+                                        BackgroundColor="Black"
+                                        FadeAnimationEnabled="true"
+                                        IsOpaque="true"
+                                        Opacity="1"
+                                        Source="{Binding BackgroundImage}">
+                <ffimageloading:CachedImage.HeightRequest>
                     <OnIdiom x:TypeArguments="x:Double"
                              Phone="300"
                              Tablet="400" />
-                </Image.HeightRequest>
-            </Image>
+                </ffimageloading:CachedImage.HeightRequest>
+            </ffimageloading:CachedImage>
             <ScrollView>
                 <!--  GRID WRAPPER  -->
                 <Grid MinimumWidthRequest="300"
@@ -190,17 +192,11 @@
                                        Text="À VENDA"
                                        TextColor="{x:Static local:Theme.OverImageTextColor}" />
                                 <Label FontAttributes="Bold"
-                                       FontSize="{artina:OnOrientationDouble PortraitPhone=18,
-                                                                             LandscapePhone=18,
-                                                                             PortraitTablet=22,
-                                                                             LandscapeTablet=22}"
+                                       FontSize="{artina:OnOrientationDouble PortraitPhone=18,                                                                              LandscapePhone=18,                                                                              PortraitTablet=22,                                                                              LandscapeTablet=22}"
                                        HorizontalTextAlignment="Center"
                                        Text="{Binding Imovel.PrecoVendaFormatado}"
                                        TextColor="{x:Static local:Theme.OverImageTextColor}" />
-                                <Label FontSize="{artina:OnOrientationDouble PortraitPhone=15,
-                                                                             LandscapePhone=15,
-                                                                             PortraitTablet=18,
-                                                                             LandscapeTablet=18}"
+                                <Label FontSize="{artina:OnOrientationDouble PortraitPhone=15,                                                                              LandscapePhone=15,                                                                              PortraitTablet=18,                                                                              LandscapeTablet=18}"
                                        HorizontalTextAlignment="Center"
                                        Text="{Binding Imovel.TipoImovel}"
                                        TextColor="{x:Static local:Theme.OverImageTextColor}" />

@@ -3,6 +3,7 @@ using Prism.Navigation;
 using PropertyChanged;
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 namespace sb100DemoApp.ViewModels
 {
