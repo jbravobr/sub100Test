@@ -150,16 +150,16 @@
       <HintPath>..\packages\Xam.Plugin.Connectivity.2.4.0.66-beta\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Base">
-      <HintPath>..\packages\UXDivers.Artina.Shared.Base.2.0.52\lib\Xamarin.iOS10\UXDivers.Artina.Shared.Base.dll</HintPath>
+      <HintPath>..\lib\ios\UXDivers.Artina.Shared.Base.2.0.52\lib\Xamarin.iOS10\UXDivers.Artina.Shared.Base.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Base.iOS">
-      <HintPath>..\packages\UXDivers.Artina.Shared.Base.2.0.52\lib\Xamarin.iOS10\UXDivers.Artina.Shared.Base.iOS.dll</HintPath>
+      <HintPath>..\lib\ios\UXDivers.Artina.Shared.Base.2.0.52\lib\Xamarin.iOS10\UXDivers.Artina.Shared.Base.iOS.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared">
-      <HintPath>..\packages\UXDivers.Artina.Shared.2.0.52\lib\Xamarin.iOS10\UXDivers.Artina.Shared.dll</HintPath>
+      <HintPath>..\lib\ios\UXDivers.Artina.Shared.2.0.52\lib\Xamarin.iOS10\UXDivers.Artina.Shared.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.iOS">
-      <HintPath>..\packages\UXDivers.Artina.Shared.2.0.52\lib\Xamarin.iOS10\UXDivers.Artina.Shared.iOS.dll</HintPath>
+      <HintPath>..\lib\ios\UXDivers.Artina.Shared.2.0.52\lib\Xamarin.iOS10\UXDivers.Artina.Shared.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">

@@ -164,19 +164,19 @@
       <HintPath>..\packages\Xam.Plugin.Connectivity.2.4.0.66-beta\lib\MonoAndroid10\Plugin.Connectivity.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Base">
-      <HintPath>..\packages\UXDivers.Artina.Shared.Base.2.0.52\lib\MonoAndroid10\UXDivers.Artina.Shared.Base.dll</HintPath>
+      <HintPath>..\lib\droid\UXDivers.Artina.Shared.Base.2.0.52\lib\MonoAndroid10\UXDivers.Artina.Shared.Base.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Base.Droid">
-      <HintPath>..\packages\UXDivers.Artina.Shared.Base.2.0.52\lib\MonoAndroid10\UXDivers.Artina.Shared.Base.Droid.dll</HintPath>
+      <HintPath>..\lib\droid\UXDivers.Artina.Shared.Base.2.0.52\lib\MonoAndroid10\UXDivers.Artina.Shared.Base.Droid.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Repeater">
-      <HintPath>..\packages\UXDivers.Artina.Controls.Repeater.2.0.52\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\UXDivers.Artina.Shared.Repeater.dll</HintPath>
+      <HintPath>..\lib\droid\UXDivers.Artina.Controls.Repeater.2.0.52\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\UXDivers.Artina.Shared.Repeater.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared">
-      <HintPath>..\packages\UXDivers.Artina.Shared.2.0.52\lib\MonoAndroid10\UXDivers.Artina.Shared.dll</HintPath>
+      <HintPath>..\lib\droid\UXDivers.Artina.Shared.2.0.52\lib\MonoAndroid10\UXDivers.Artina.Shared.dll</HintPath>
     </Reference>
     <Reference Include="UXDivers.Artina.Shared.Droid">
-      <HintPath>..\packages\UXDivers.Artina.Shared.2.0.52\lib\MonoAndroid10\UXDivers.Artina.Shared.Droid.dll</HintPath>
+      <HintPath>..\lib\droid\UXDivers.Artina.Shared.2.0.52\lib\MonoAndroid10\UXDivers.Artina.Shared.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
