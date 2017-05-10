@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:sb100DemoApp;assembly=sb100DemoApp"
+	x:Class="sb100DemoApp.Views.CaracteristicaHeaderStyleTemplate">
+	<StackLayout
+			Orientation="Horizontal">
+		<Label
+			x:Name="HeaderIcon" 
+			FontSize="18"
+			Style="{x:Static local:Theme.SocialHeaderStyle}"
+			Text="{x:Static local:GrialShapesFont.InsertPhoto}"
+			FontFamily="{x:Static local:Theme.IconsFontFamily}"
+			TranslationY="1"/>
+		<Label
+			x:Name="HeaderLabel"
+			Style="{x:Static local:Theme.SocialHeaderStyle}"
+			Text="&#032; FOTOS"/>
+	</StackLayout>
+</ContentView>

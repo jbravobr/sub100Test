@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:sb100DemoApp;assembly=sb100DemoApp"
+	x:Class="sb100DemoApp.Views.CaracteristicaComumItemTemplate">
+	<StackLayout
+			Orientation="Horizontal">
+		<Label
+			x:Name="HeaderIcon" 
+			FontSize="18"
+			Style="{x:Static local:Theme.SocialHeaderStyle}"
+			Text="{x:Static local:FontAwesomeFont.Info}"
+			FontFamily="{x:Static local:Theme.IconsFontAwesome}"
+			TranslationY="1"/>
+		<Label
+			x:Name="HeaderLabel"
+			Style="{x:Static local:Theme.SocialHeaderStyle}"
+			Text="&#032; CARACTERÍSTICAS"/>
+	</StackLayout>
+</ContentView>

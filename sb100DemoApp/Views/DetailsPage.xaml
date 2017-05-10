@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="sb100DemoApp.Views.DetailsPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+             xmlns:local="clr-namespace:sb100DemoApp;assembly=sb100DemoApp"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:templates="clr-namespace:sb100DemoApp.Views;assembly=sb100DemoApp"
+             Title="Detalhes"
+             prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.Content>
+        <Grid>
+            <!--  BACKGROUND IMAGE  -->
+            <Image VerticalOptions="Start"
+                   Aspect="AspectFill"
+                   BackgroundColor="Black"
+                   IsOpaque="true"
+                   Opacity="1"
+                   Source="{Binding BackgroundImage}">
+                <Image.HeightRequest>
+                    <OnIdiom x:TypeArguments="x:Double"
+                             Phone="300"
+                             Tablet="400" />
+                </Image.HeightRequest>
+            </Image>
+            <ScrollView>
+                <!--  GRID WRAPPER  -->
+                <Grid MinimumWidthRequest="300"
+                      Padding="0"
+                      RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!--  IMOVEL HEADER  -->
+                    <Grid Grid.Row="0" Padding="0">
+                        <Grid.HeightRequest>
+                            <OnIdiom x:TypeArguments="x:Double"
+                                     Phone="300"
+                                     Tablet="400" />
+                        </Grid.HeightRequest>
+
+                        <!--  TOOLBAR  -->
+                        <Grid VerticalOptions="End"
+                              BackgroundColor="{x:Static local:Theme.TranslucidBlack}"
+                              Style="{x:Static local:Theme.ToolbarStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Column="0"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         Orientation="Horizontal"
+                                         Spacing="0">
+                                <Label FontFamily="{x:Static local:Theme.IconsFontAwesome}"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{x:Static local:FontAwesomeFont.Bed}"
+                                       TextColor="{x:Static local:Theme.AccentColor}"
+                                       VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                                 Phone="15"
+                                                 Tablet="20" />
+                                    </Label.FontSize>
+                                </Label>
+
+                                <Label Margin="7,0,0,0"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{Binding Imovel.Dormitorios}"
+                                       TextColor="{x:Static local:Theme.OverImageTextColor}"
+                                       VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                                 Phone="15"
+                                                 Tablet="20" />
+                                    </Label.FontSize>
+                                </Label>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="1"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         Orientation="Horizontal"
+                                         Spacing="0">
+                                <Label FontFamily="{x:Static local:Theme.IconsFontAwesome}"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{x:Static local:FontAwesomeFont.Bathtub}"
+                                       TextColor="{x:Static local:Theme.AccentColor}"
+                                       VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                                 Phone="15"
+                                                 Tablet="20" />
+                                    </Label.FontSize>
+                                </Label>
+
+                                <Label Margin="7,0,0,0"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{Binding Imovel.Suites}"
+                                       TextColor="{x:Static local:Theme.OverImageTextColor}"
+                                       VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                                 Phone="15"
+                                                 Tablet="20" />
+                                    </Label.FontSize>
+                                </Label>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="2"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         Orientation="Horizontal"
+                                         Spacing="0">
+                                <Label FontFamily="{x:Static local:Theme.IconsFontAwesome}"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{x:Static local:FontAwesomeFont.Car}"
+                                       TextColor="{x:Static local:Theme.AccentColor}"
+                                       VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                                 Phone="15"
+                                                 Tablet="20" />
+                                    </Label.FontSize>
+                                </Label>
+
+                                <Label Margin="7,0,0,0"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{Binding Imovel.Vagas}"
+                                       TextColor="{x:Static local:Theme.OverImageTextColor}"
+                                       VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                                 Phone="15"
+                                                 Tablet="20" />
+                                    </Label.FontSize>
+                                </Label>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="3"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         Orientation="Horizontal"
+                                         Spacing="0">
+                                <Label FontFamily="{x:Static local:Theme.IconsFontAwesome}"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{x:Static local:FontAwesomeFont.ObjectGroup}"
+                                       TextColor="{x:Static local:Theme.AccentColor}"
+                                       VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                                 Phone="15"
+                                                 Tablet="20" />
+                                    </Label.FontSize>
+                                </Label>
+
+                                <Label Margin="7,0,0,0"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{Binding Imovel.AreaTotalFormatado}"
+                                       TextColor="{x:Static local:Theme.OverImageTextColor}"
+                                       VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                                 Phone="15"
+                                                 Tablet="20" />
+                                    </Label.FontSize>
+                                </Label>
+                            </StackLayout>
+                        </Grid>
+
+                        <StackLayout Grid.Row="0"
+                                     VerticalOptions="Center"
+                                     Padding="20"
+                                     Spacing="20"
+                                     TranslationY="-20">
+                            <Grid HorizontalOptions="Center"
+                                  VerticalOptions="Center"
+                                  TranslationY="25" />
+
+                            <!--  IMOVEL DESCRIPTION  -->
+                            <StackLayout Padding="20" Style="{x:Static local:Theme.StyleForValueCenteredStack}">
+                                <Label FontSize="12"
+                                       HorizontalTextAlignment="Center"
+                                       Style="{x:Static local:Theme.StyleForCurrencyValues}"
+                                       Text="À VENDA"
+                                       TextColor="{x:Static local:Theme.OverImageTextColor}" />
+                                <Label FontAttributes="Bold"
+                                       FontSize="{artina:OnOrientationDouble PortraitPhone=18,
+                                                                             LandscapePhone=18,
+                                                                             PortraitTablet=22,
+                                                                             LandscapeTablet=22}"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{Binding Imovel.PrecoVendaFormatado}"
+                                       TextColor="{x:Static local:Theme.OverImageTextColor}" />
+                                <Label FontSize="{artina:OnOrientationDouble PortraitPhone=15,
+                                                                             LandscapePhone=15,
+                                                                             PortraitTablet=18,
+                                                                             LandscapeTablet=18}"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{Binding Imovel.TipoImovel}"
+                                       TextColor="{x:Static local:Theme.OverImageTextColor}" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+
+                    <Grid Grid.Row="1" BackgroundColor="{x:Static local:Theme.BasePageColor}">
+
+                        <!--  SOCIAL HEADER  -->
+                        <StackLayout Padding="0">
+                            <templates:CaracteristicaHeaderStyleTemplate IconText="{x:Static local:GrialShapesFont.InsertPhoto}" Text="&#032;PHOTOS" />
+                            <!--  SOCIAL IMAGE GALLERY GRID  -->
+                            <artina:GridOptionsView HeightRequest="400"
+                                                    VerticalOptions="Fill"
+                                                    ColumnCount="3"
+                                                    ColumnSpacing="10"
+                                                    ItemsSource="{Binding Fotos}"
+                                                    Padding="10,0"
+                                                    RowCount="3"
+                                                    RowSpacing="10">
+
+                                <artina:GridOptionsView.ItemTemplate>
+                                    <DataTemplate>
+                                        <templates:ImageGalleryImage Image="{Binding .}" />
+                                    </DataTemplate>
+                                </artina:GridOptionsView.ItemTemplate>
+                            </artina:GridOptionsView>
+
+
+                            <!--  SOCIAL HEADER  -->
+                            <templates:CaracteristicaComumItemTemplate />
+
+                            <BoxView Style="{x:Static local:Theme.SocialHeaderStyleBorderBottomStyle}" />
+
+                            <!--  FRIENDS LIST  -->
+                            <ListView ItemsSource="{Binding Caracteristicas}"
+                                      RowHeight="40"
+                                      SeparatorColor="{x:Static local:Theme.ListViewSeparatorColor}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <templates:CaracteristicaItemTemplate />
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

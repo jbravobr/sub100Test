@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="sb100DemoApp.Views.CaracteristicaItemTemplate"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:sb100DemoApp;assembly=sb100DemoApp">
+    <StackLayout Orientation="Horizontal"
+                 Padding="0,10"
+                 TranslationX="10">
+        <Label FontFamily="{x:Static local:Theme.IconsFontAwesome}"
+               HorizontalTextAlignment="Center"
+               Text="{x:Static local:FontAwesomeFont.Check}"
+               TextColor="{x:Static local:Theme.AccentColor}"
+               VerticalTextAlignment="Start" />
+        <Label VerticalOptions="CenterAndExpand" Text="{Binding .}" />
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="sb100DemoApp.Views.ImageGalleryImage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="Root">
+    <ContentView.Content>
+        <Image HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Aspect="AspectFill"
+               Source="{Binding Source={x:Reference Name=Root},
+                                Path=Image}" />
+    </ContentView.Content>
+    <ContentView.GestureRecognizers>
+        <TapGestureRecognizer Tapped="OnImageTapped" />
+    </ContentView.GestureRecognizers>
+</ContentView>
